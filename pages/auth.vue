@@ -16,7 +16,7 @@
                         flex 
                         items-center 
                         justify-center 
-                        gap-3
+                        gap-10
                         p-1.5
                         w-full
                         border 
@@ -28,6 +28,27 @@
                     <div class="flex items-center gap-2 justify-center">
                         <img class="w-full max-w-[30px] rounded-full" src="/github-logo.png">
                         Github
+                    </div>
+                </button>
+
+                <button
+                    @click="login('google')"
+                    class="
+                        flex 
+                        items-center 
+                        justify-center 
+                        gap-10
+                        p-1.5
+                        w-full
+                        border 
+                        rounded-full
+                        text-lg
+                        font-semibold
+                    "
+                >
+                    <div class="flex items-center gap-3 justify-center">
+                        <img class="w-full max-w-[30px] rounded-full" src="/gmail-logo.png">
+                        Gmail
                     </div>
                 </button>
 

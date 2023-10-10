@@ -108,8 +108,10 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
 import { useUserStore } from '~/stores/user';
 const userStore = useUserStore()
+const router = useRouter();
 
 const runtimeConfig = useRuntimeConfig()
 let isMenu = ref(false)
@@ -135,7 +137,7 @@ const hasCheeredComputed = computed(() => {
 })
 
 const deleteRecipe = async (id, picture) => {
-    let res = confirm('Are you sure you want to delete this recipe?')
+    let res = confirm('Apakah anda yakin akan menghapus resep ini?')
 
     if (!res) return 
 
@@ -207,5 +209,12 @@ const cheersFunc = () => {
     }
 
     cheerRecipe(props.recipe.id)
+}
+
+const editRecipe = (recipeId, recipePicture) => {
+    router.push({
+        name: '~/components/EditRecipe',
+        params: { recipeId: recipeId, recipePicture: recipePicture },
+    });
 }
 </script>

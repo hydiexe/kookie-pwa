@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="fixed z-50 bottom-0 h-full w-full overflow-hidden">
         <h1>Edit Resep</h1>
         <form @submit.prevent="updateRecipe">
         </form>

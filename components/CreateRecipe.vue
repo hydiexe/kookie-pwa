@@ -42,11 +42,11 @@
                                 </div>
                                 <!-- Form untuk ingredients -->
                                 <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
-                                    <div class="py-4 text-[16px] font-semibold">Bahan</div>
+                                    <div class="py-4 text-[16px] font-semibold">Bahan & Alat</div>
                                     <textarea
                                         v-model="ingredients"
                                         style="resize: none;"
-                                        placeholder="Bahan..."
+                                        placeholder="Apa saja alat dan bahannya?"
                                         id="ingredientsTextarea"
                                         @input="adjustTextareaHeight('ingredientsTextarea')"
                                         class="w-full bg-black outline-none"

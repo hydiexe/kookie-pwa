@@ -3,10 +3,7 @@
         <div class="bg-black h-full w-full text-white overflow-auto">
             <div class="flex items-center justify-start py-4 max-w-[500px] mx-auto border-b border-b-gray-700">
                 <button 
-                    @click="
-                        userStore.isSearchOverlay = false;
-                        clearData();
-                    "
+                    @click="closeSearch"
                     class="rounded-full px-2"
                 >
                     <Icon name="mdi:close" size="25"/>
@@ -50,7 +47,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useUserStore } from '~/stores/user';
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 const userStore = useUserStore()
 const router = useRouter();
