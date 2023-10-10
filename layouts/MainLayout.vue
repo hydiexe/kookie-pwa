@@ -41,6 +41,7 @@
 
                 <!-- cookbook -->
                 <button 
+                    @click="userStore.isCookbookOverlay = true"
                     class="w-full h-full"
                 >
                     <Icon class="mb-1" name="material-symbols:library-books-outline-rounded" size="32" color="#ffffff"/>

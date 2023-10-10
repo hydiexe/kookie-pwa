@@ -28,6 +28,14 @@
                             <div>Delete</div>
                             <Icon name="solar:trash-bin-trash-broken" size="20"/>
                         </button>
+                        <button 
+                            @click="editRecipe(recipe.id, recipe.picture)"
+                            class="flex items-center rounded gap-2 text-white justify-between bg-black w-full pl-4 pr-3 py-1 hover:bg-gray-900"
+                            style="color: white;"
+                        >
+                            <div>Edit</div>
+                            <Icon name="material-symbols:edit-rounded" size="20" style="color: white;"/>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,12 @@ const routes = [
         component: SearchRes,
         props: (route) => ({ result: route.params.result }),
     },
+    {
+        path: '/edit-recipe/:id',
+        name: 'EditRecipe',
+        component: EditRecipe,
+        props: true,
+    },
 ];
 
 const router = createRouter({

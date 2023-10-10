@@ -29,32 +29,41 @@
                         <div class="bg-black rounded-lg w-[calc(100%-50px)] text w-full font-light">
                             <div class="pt-2 text-gray-300 bg-black w-full">
                                 <!-- Form untuk title -->
-                                <textarea
-                                    v-model="title" 
-                                    style="resize: none;" 
-                                    placeholder="Recipe Title" 
-                                    id="titleTextarea" 
-                                    @input="adjustTextareaHeight('titleTextarea')" 
-                                    class="w-full bg-black outline-none"
-                                ></textarea>
+                                <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
+                                    <div class="py-4 text-[16px] font-semibold">Recipe Title</div>
+                                    <textarea
+                                        v-model="title"
+                                        style="resize: none;"
+                                        placeholder="Enter recipe title"
+                                        id="titleTextarea"
+                                        @input="adjustTextareaHeight('titleTextarea')"
+                                        class="w-full bg-black outline-none"
+                                    ></textarea>
+                                </div>
                                 <!-- Form untuk ingredients -->
-                                <textarea
-                                    v-model="ingredients" 
-                                    style="resize: none;" 
-                                    placeholder="Ingredients" 
-                                    id="ingredientsTextarea" 
-                                    @input="adjustTextareaHeight('ingredientsTextarea')" 
-                                    class="w-full bg-black outline-none"
-                                ></textarea>
+                                <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
+                                    <div class="py-4 text-[16px] font-semibold">Ingredients</div>
+                                    <textarea
+                                        v-model="ingredients"
+                                        style="resize: none;"
+                                        placeholder="Enter ingredients"
+                                        id="ingredientsTextarea"
+                                        @input="adjustTextareaHeight('ingredientsTextarea')"
+                                        class="w-full bg-black outline-none"
+                                    ></textarea>
+                                </div>
                                 <!-- Form untuk steps -->
-                                <textarea
-                                    v-model="steps" 
-                                    style="resize: none;" 
-                                    placeholder="Cooking Steps" 
-                                    id="stepsTextarea" 
-                                    @input="adjustTextareaHeight('stepsTextarea')" 
-                                    class="w-full bg-black outline-none"
-                                ></textarea>
+                                <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
+                                    <div class="py-4 text-[16px] font-semibold">Steps</div>
+                                    <textarea
+                                        v-model="steps"
+                                        style="resize: none;"
+                                        placeholder="Enter steps"
+                                        id="stepsTextarea"
+                                        @input="adjustTextareaHeight('stepsTextarea')"
+                                        class="w-full bg-black outline-none"
+                                    ></textarea>
+                                </div>
                             </div>
 
                             <!-- gambar -->
@@ -113,10 +122,10 @@ let ingredients = ref(null)
 let steps = ref(null)
 let isLoading = ref(false)
 
-const adjustTextareaHeight = () => {
-  var textarea = document.getElementById("textarea");
-  textarea.style.height = "auto"
-  textarea.style.height = textarea.scrollHeight + "px"
+const adjustTextareaHeight = (textareaId) => {
+    var textarea = document.getElementById(textareaId);
+    textarea.style.height = "auto"
+    textarea.style.height = textarea.scrollHeight + "px"
 }
 
 let file = ref(null)
