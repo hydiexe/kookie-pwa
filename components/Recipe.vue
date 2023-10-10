@@ -37,7 +37,7 @@
                     <div class="absolute ml-4 mt-1 top-0 w-[1px] bg-gray-700 h-full" />
                 </div>
                 <div class="bg-black rounded-lg w-[calc(100%-50px)] text-sm w-full font-light">
-                    <div class="py-2 text-gray-300">{{ recipe.title }}</div>
+                    <div class="py-2 font-semibold text-semibold text-gray-300">{{ recipe.title }}</div>
                     <div class="py-2 text-gray-300">{{ recipe.ingredients }}</div>
                     <div class="py-2 text-gray-300">{{ recipe.steps }}</div>
 

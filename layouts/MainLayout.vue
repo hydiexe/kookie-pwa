@@ -24,7 +24,8 @@
                 </button>
 
                 <!-- search -->
-                <button 
+                <button
+                    @click="userStore.isSearchOverlay = true" 
                     class="w-full h-full"
                 >
                     <Icon class="mb-1" name="material-symbols:search-rounded" size="32" color="#ffffff"/>
