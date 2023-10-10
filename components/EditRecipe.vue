@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Edit Recipe</h1>
+        <h1>Edit Resep</h1>
         <form @submit.prevent="updateRecipe">
         </form>
     </div>

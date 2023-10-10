@@ -11,7 +11,7 @@
                 >
                     <Icon name="mdi:close" size="25"/>
                 </button>
-                <div class="text-[16px] font-semibold">New Recipe</div>
+                <div class="text-[16px] font-semibold">Bagi Resep</div>
             </div>
 
             <div id="Recipe" class="z-40 bottom-0 max-h-[100vh-200px] w-full px-3 max-w-[500px] mx-auto">
@@ -30,11 +30,11 @@
                             <div class="pt-2 text-gray-300 bg-black w-full">
                                 <!-- Form untuk title -->
                                 <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
-                                    <div class="py-4 text-[16px] font-semibold">Recipe Title</div>
+                                    <div class="py-4 text-[16px] font-semibold">Nama Resep</div>
                                     <textarea
                                         v-model="title"
                                         style="resize: none;"
-                                        placeholder="Enter recipe title"
+                                        placeholder="Bagaimana kami bisa menyebut resep mu?"
                                         id="titleTextarea"
                                         @input="adjustTextareaHeight('titleTextarea')"
                                         class="w-full bg-black outline-none"
@@ -42,11 +42,11 @@
                                 </div>
                                 <!-- Form untuk ingredients -->
                                 <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
-                                    <div class="py-4 text-[16px] font-semibold">Ingredients</div>
+                                    <div class="py-4 text-[16px] font-semibold">Bahan</div>
                                     <textarea
                                         v-model="ingredients"
                                         style="resize: none;"
-                                        placeholder="Enter ingredients"
+                                        placeholder="Bahan..."
                                         id="ingredientsTextarea"
                                         @input="adjustTextareaHeight('ingredientsTextarea')"
                                         class="w-full bg-black outline-none"
@@ -54,11 +54,11 @@
                                 </div>
                                 <!-- Form untuk steps -->
                                 <div class="max-w-[500px] mx-auto border-b border-b-gray-700">
-                                    <div class="py-4 text-[16px] font-semibold">Steps</div>
+                                    <div class="py-4 text-[16px] font-semibold">Langkah-langkah</div>
                                     <textarea
                                         v-model="steps"
                                         style="resize: none;"
-                                        placeholder="Enter steps"
+                                        placeholder="Masukkan langkah-langkahnya"
                                         id="stepsTextarea"
                                         @input="adjustTextareaHeight('stepsTextarea')"
                                         class="w-full bg-black outline-none"

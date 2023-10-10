@@ -11,7 +11,7 @@
                 >
                     <Icon name="mdi:close" size="25"/>
                 </button>
-                <div class="text-[16px] font-semibold">Search Recipe</div>
+                <div class="text-[16px] font-semibold">Cari Resep</div>
             </div>
 
             <div class="p-4 flex items-center justify-start py-4 max-w-[500px] mx-auto border-b border-b-gray-700">
@@ -23,7 +23,7 @@
                 />
             </div>
             <div class="p-4 py-4 max-w-[500px] mx-auto border-b border-b-gray-700">
-                <h2 class="text-lg font-semibold">Search Results:</h2>
+                <h2 class="text-lg font-semibold">Hasil:</h2>
                 <ul v-if="searchResults.length > 0" class="list-disc ml-6 mt-2 text-white">
                     <li 
                         v-for="(result, index) in searchResults" 
@@ -34,7 +34,7 @@
                         {{ result.title }}
                     </li>
                 </ul>
-                <div v-else class="mt-2 text-gray-500">No results found.</div>
+                <div v-else class="mt-2 text-gray-500">Resep tidak ditemukan :(</div>
             </div>
 
             <!-- <div v-if="selectedResult" class="p-4 py-4 max-w-[500px] mx-auto border-b border-b-gray-700">
@@ -65,7 +65,7 @@ const handleSearch = async () => {
     try {
     const { data, error } = await client
         .from('Recipes')
-        .select('title', 'ingredients', 'steps') // Replace 'name' with the field you want to search in
+        .select('title', 'ingredients', 'steps') 
         .ilike('title', `%${searchQuery.value}%`);
 
     if (error) {
